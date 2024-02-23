@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "">
+<html lang="en">
+<head>
+    <link rel="shortcut icon" type="image/ico" href="../../s1.png">
+    <link rel="stylesheet" type="text/css" href="../fonts/fontawesome-free-5.14.0-web/css/fontawesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../fonts/fontawesome-free-5.14.0-web/css/fontawesome.css">
+    <link rel="stylesheet" type="text/css" href="../fonts/fontawesome-free-5.14.0-web/css/solid.css">
+    <link rel="stylesheet" type="text/css" href="../fonts/fontawesome-free-5.14.0-web/css/all.css">
+    <link rel="stylesheet" type="text/css" href="../fonts/fontawesome-free-5.14.0-web/css/svg-with-js.css">
+    <link rel="stylesheet" type="text/css" href="../fonts/fontawesome-free-5.14.0-web/css/v4-shims.css">
+    <link rel="stylesheet" type="text/css" href="../fonts/fontawesome-free-5.14.0-web/css/regular.css">
+	<title>Skiyen | Download</title>
+</head>
+<body onload="enableEditMode();">
+  <div style="text-align: right; width: 100%; font-size: 20px;position: fixed;bottom: 0;right: 0;color:black;"><span>Powered by <a style="font-size: 20px;color:  #007bff;text-decoration: none;" href="../">Skiyen</a></div>
+  <div>
+  <button onclick="exeCmd('bold')"><i class="fa fa-bold" style="color: black;"></i></button>
+  <button onclick="exeCmd('italic')"><i class="fa fa-italic" style="color: black;"></i></button>
+  <button onclick="exeCmd('underline')"><i class="fa fa-underline" style="color: black;"></i></button>
+  <button onclick="exeCmd('srikeThrough')"><i class="fa fa-strikethrough" style="color: black;"></i></button>
+  <button onclick="exeCmd('justifyLeft')"><i class="fa fa-align-left" style="color: black;"></i></button>
+  <button onclick="exeCmd('justifyCenter')"><i class="fa fa-align-center" style="color: black;"></i></button>
+  <button onclick="exeCmd('justifyRight')"><i class="fa fa-align-right" style="color: black;"></i></button>
+  <button onclick="exeCmd('justifyFull')"><i class="fa fa-align-justify" style="color: black;"></i></button>
+  <button onclick="exeCmd('')"><i class="fa fa-" style="color: black;"></i></button>
+</div>
+<iframe name="richTextField" style="width: 100%;height:500px;"></iframe>
+<script type="text/javascript">
+  function enableEditMode () {
+    richTextField.document.designMode = "On";
+  }
+  function exeCmd (command) {
+    richTextField.document.exeCommand(command, false, null);
+  }
+</script>
+</body>
+</html>

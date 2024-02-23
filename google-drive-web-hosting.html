@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SKIY | Help</title>
+</head>
+<body>
+<button class="accordion">How To Host You Website With Google Drive</button>
+<div class="panel">
+<heaing class="head1">Step By Step Hosting Of Website With Google Drive</heaing><br />
+<heading class="head2">Step 1:</heading>
+<p>Create a google account for your website</p>
+<p>Then sign in to google drive with that account (drive.google.com)</p>
+
+<heading class="head2">Step 2:</heading>
+<p>Next, we drop the website folder in Google Drive preferably in the root. The folder should start with www. and end with .com</p>
+<p>The folder can be created in google drive or uploaded from your device</p>
+<p>All your website files should be uploaded to this folder</p>
+
+<heading class="head1">Step 3:</heading>
+<p>The first thing you need is an index.html file (Homepage).</p>
+
+<heading class="head2">Step 4:</heading>
+<p>Make your folder public</p>
+<p>Right click on the folder and click on share</p>
+<p>Then change the setting from private to public</p>
+<p>Make the setting under public to be viewer</p>
+<p>Then click ok (save)</p>
+
+<heading class="head2">Step 5:</heading>
+<p>Go to your browser and tyoe DRW DV</p>
+<p>Select Google Drive</p>
+<p>Select your account for the website</p>
+<p>Click Allow</p>
+<p>You will be taken to your Admin Panel</p>
+<p>Your will see the url of your website</p>
+<p>Copy it</p>
+<br />
+<p>You have succesfully hosted your Website</p>
+<p>You can now share the url</p>
+
+<br />
+<heading class="head1">Advantages Of Hosting With Google Drive</heading>
+<p>1. It is free (It saves hundreds of dollars per year in web hosting)</p>
+<p>2. It is Secure (https)</p>
+<p>3. No time down</p>
+<p>4. No bandwidth limit</p>
+<br />
+<heading class="head1">Disadvantages Of Hosting With Google Drive</heading>
+<p>1. You can only use html, css and js language other languages like php will NOT work.</p>
+</div>
+
+</body>
+</html>
+<style type="text/css">
+.head1{
+	color: black;
+	font-weight: bold;
+	font-size: 18px;
+}
+.head2{
+	color: black;
+	font-weight: bold;
+	font-size: 15px;
+}
+	/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 0 18px;
+  background-color: #eee;
+  display: none;
+  overflow: hidden;
+}
+.accordion:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: #777;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+</style>
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("active");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>

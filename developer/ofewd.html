@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC  "">
+<html lang="en">
+<head>
+  <script src="jquery-2.2.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+  <title>Skiyen | Online Front-End Web Development | For Programmers </title>
+  <link rel="shortcut icon" type="image/ico" href="../S1.ico">
+  <meta charset="windows-1252">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <center><h3><span><span onclick="alert('OFEWD - Online Front-End Web Development is a device that allows you to view you HTML , CSS Or Javascript Work Online. It has an input text editor and browser');">OFEWD</span> | Online Front-End Web Development</span></h3></center>
+        <table id="table" class="hundred">
+            <th class="hundred blink" style="text-align: center;"></th>
+        </table>
+      </div>
+       <div class="whole">
+      <div class="title-heading"> <button class="btn btn-primary" onclick="addHTMLTableRow()">View</button><button class="btn btn-secondary" onclick="refresh()">Clear</button></div>
+      <div class="tab tab-2">
+        <textarea type="text" style="text-align: center;" class="hundred" name="fname" id="fname" placeholder="Input your code..."></textarea>
+</div>
+<input type="hidden" name="lname" id="lname" placeholder="Last Name">
+<input type="hidden" name="age" id="age" placeholder="Age"><br>
+<center>
+    </div>
+</center>
+<style type="text/css">
+  .title-heading{
+    width: 100%;
+    border:0;
+  }
+
+  .hundred{
+    width: 100%;
+  }
+  .whole{
+    position: fixed;
+    bottom: 0;
+    left:0;
+    width:100%;
+    border:0;
+  }
+</style>
+    <script type="text/javascript">
+      function addHTMLTableRow(){
+        var table = document.getElementById("table"),
+            newRow = table.insertRow(table.lenght),
+            cell1 = newRow.insertCell(0),
+            fname = document.getElementById("fname").value,
+            lname = document.getElementById("lname").value,
+            age = document.getElementById("age").value;
+            clear()
+
+          cell1.innerHTML = fname;
+          cell2.innerHTML = lname;
+          cell3.innerHTML = age;
+      }
+        function clear() {
+    $("#fname").val("");
+   }
+   function refresh(){
+    window.location = "ofewd.html";
+   }
+    </script>
+
+</body>
+</html>

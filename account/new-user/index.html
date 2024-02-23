@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+  <link rel="shortcut icon" type="image/ico" href="s1.ico">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.1.1">
+    <title>Register | Skiy</title>
+    <!-- Font Awessome Added//-->
+    <link rel="shortcut icon" type="image/ico" href="../../s1.ico">
+    <link rel="stylesheet" type="text/css" href="../../fonts/fontawesome-free-5.14.0-web/css/fontawesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../fonts/fontawesome-free-5.14.0-web/css/fontawesome.css">
+    <link rel="stylesheet" type="text/css" href="../../fonts/fontawesome-free-5.14.0-web/css/solid.css">
+    <link rel="stylesheet" type="text/css" href="../../fonts/fontawesome-free-5.14.0-web/css/all.css">
+    <link rel="stylesheet" type="text/css" href="../../fonts/fontawesome-free-5.14.0-web/css/svg-with-js.css">
+    <link rel="stylesheet" type="text/css" href="../../fonts/fontawesome-free-5.14.0-web/css/v4-shims.css">
+    <link rel="stylesheet" type="text/css" href="../../fonts/fontawesome-free-5.14.0-web/css/regular.css">
+
+    <!-- Bootstrap core CSS -->
+<link href="../../css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+  </head>
+  <body class="text-center">
+    <form class="form-signin" name="f" id="form" action="../verification/">
+      <hm style="font-size: 60px; color: blue; font-weight: bold;"><i class="fa fa-user-circle" style="color:black;"></i></hm>
+    <h1 class="h3 mb-3 font-weight-normal">Sign Up</h1>
+    <div id="error" style="color: red;"></div>
+      <label for="inputEmail" class="sr-only">Username</label>
+  <input type="text" class="form-control" id="name" placeholder="Username" autofocus name="uname" required="">
+  <label for="email" class="sr-only">Email</label>
+  <input type="email"  id="email" name="email" class="form-control" placeholder="Email" required>
+  <label for="inputPassword" class="sr-only">Password</label>
+  <input type="password"  id="password" name="psw" class="form-control" placeholder="Password" required>
+   <label for="inputPassword" class="sr-only">Confirm Password</label>
+  <input type="password"  id="password1" name="confirmpsw" class="form-control" placeholder="Confirm Password" required>
+  <label for="phn-no" class="sr-only">Phone Number</label>
+  <input type="number"  id="phn" name="phn-no" class="form-control" placeholder="Phone Number" required="">
+  <input type="radio" name="gender" required="">Male
+  <input type="radio" name="gender" required="">Female
+  <div class="checkbox mb-3">
+    <label>
+      <input type="checkbox" value="remember-me" checked name="remeber-me"> Remember me
+    </label>
+  </div>
+  <button class="btn btn-lg btn-primary btn-block" onclick="checkpassword()" type="submit"><i class="fa fa-sign-in" style="color: white;"></i> Sign Up</button>
+ <center>
+    <a href="../user-login/">Already Have An Account?</a><br/>
+    </center>
+  <p class="mt-5 mb-3 text-muted">&copy; 2020</p>
+</form>
+<script defer type="text/javascript">
+  const name = document.getElementById('name')
+  const password = document.getElementById('password')
+  const password1 = document.getElementById('password1')
+  const form  = document.getElementById('form')
+  const errorElement = document.getElementById('error')
+
+  form.addEventListener('submit', (e) => {
+    let messages = []
+    if (name.value === '' || name.value == null) {
+      messages.push('Username is required')
+    }
+
+    if (password.value === '' || password.value == null) {
+      messages.push('Password is required')
+    }
+
+    if (password1.value === '' || password1.value == null) {
+      messages.push('Confirm Password is required')
+    }
+
+    if (password.value.length <= 8) {
+      messages.push('Password must be longer than 8 characters')
+    }
+
+    if (password.value.length >= 20) {
+      messages.push('Password must be less than 20 characters')
+    }
+
+    if (password.value === 'password') {
+      messages.push('Password cannot be password')
+    }
+    if (password.value === 'www.skiy.com') {
+      messages.push('Access Denied!')
+    }
+
+     if (password.value === '12345678') {
+      messages.push('Password cannot be 12345678')
+    }
+
+    if (messages.length > 0) {
+      e.preventDefault()
+      errorElement.innerText = messages.join(', ')
+    }
+  })
+</script>
+</body>
+</html>
+<style type="text/css">
+  html,
+body {
+  height: 100%;
+}
+
+body {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #f5f5f5;
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+}
+.form-signin .checkbox {
+  font-weight: 400;
+}
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+</style>
+<script type="text/javascript">
+  var message="Sorry, right click is disabled"
+  /////////////////////////
+  function clickIE(){if (document.all) {alert(message);return false;}}
+  function clickNS(e) {if
+    (document.layers||(document.getElementById&&!document.all)) {
+      if (e.which==2||e.which==3) {alert(message);return false;}}}
+      if (document.layers)
+        {document.captureEvents(Event.MOUSEDOWN);document.oncontextmeny=clickIE;}
+
+      document.oncontextmenu=new Function("return false")
+      // -->
+</script>

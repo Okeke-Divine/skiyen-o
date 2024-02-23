@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SKIY | Help</title>
+</head>
+<body>
+<button class="accordion">HOW TO DELETE YOUR FACEBOOK ACCOUNT COMPLETLY</button>
+<div class="panel">
+<h3>How to DELETE your FACEBOOK account completely</h3>
+<p><b>1.</b> Click at the top right of any Facebook page. (Navbar)</p>
+<p><b>2.</b> Click Settings then click Your Facebook Information in the left column.</p>
+<p><b>3.</b> Click Deactivation and Deletion.</p>
+<p><b>4.</b> Choose Delete Account, then click Continue to Account Deletion.</p>
+<p><b>5.</b> Enter your password, click Continue and then click Delete Account.</p>
+</div>
+<div style="text-align: right; width: 100%;"><span>Powered by <a href="website.html">Skiy</a></div>
+</body>
+</html>
+<style type="text/css">
+.head1{
+	color: black;
+	font-weight: bold;
+	font-size: 18px;
+}
+.head2{
+	color: black;
+	font-weight: bold;
+	font-size: 15px;
+}
+	/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 0 18px;
+  background-color: #eee;
+  display: none;
+  overflow: hidden;
+}
+.accordion:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: #777;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+</style>
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("active");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
